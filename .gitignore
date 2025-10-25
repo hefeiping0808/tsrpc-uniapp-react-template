@@ -1,0 +1,18 @@
+# Node.js
+*/node_modules/
+
+*/.vscode/*
+*/dist/
+# 日志文件
+*.log
+# 操作系统文件
+*/DS_Store/
+DS_Store
+.DS_Store
+# 编辑器配置
+vscode/
+idea/
+# 锁文件
+package-lock.json
+yarn.lock
+pnpm-lock.json
