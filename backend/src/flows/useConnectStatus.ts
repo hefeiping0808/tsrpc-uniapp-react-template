@@ -1,5 +1,5 @@
 import { WsClient, WsServer } from "tsrpc";
-import { ServiceType } from "../protocols/serviceProto";
+import { ServiceType } from "../shared/protocols/serviceProto";
 
 export const useConnectStatus = (server: WsServer<ServiceType>) => {
     // 连接之后处理

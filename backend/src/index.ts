@@ -2,6 +2,8 @@ import * as path from "path";
 import { HttpServer, WsServer } from "tsrpc";
 import { serviceProto } from "./shared/protocols/serviceProto";
 import { ENV } from "./config";
+import { MongoDB } from "./kernel/mongodb";
+import { snowflakeIdv1 } from "./kernel/utils/snowFlake";
 
 declare module 'tsrpc' {
   export interface BaseConnection {
@@ -23,6 +25,9 @@ const httpServer = new HttpServer(serviceProto, {
 export const wsServer = new WsServer(serviceProto, {
   port: ENV.protWs, json: true
 })
+
+export const mongo = new MongoDB(ENV.mongo)
+export const snowFlake = new snowflakeIdv1({ workerId: 1 })
 
 // Initialize before server start
 async function init() {

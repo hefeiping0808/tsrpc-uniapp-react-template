@@ -1,8 +1,8 @@
 import { HttpServer } from "tsrpc";
-import { ServiceType } from "../protocols/serviceProto";
-import { BaseRequest } from "../protocols/base";
-import Encrypt from "../../kernel/utils/encrypt";
-import { strict } from "assert";
+import { ServiceType } from "../shared/protocols/serviceProto";
+import { BaseRequest } from "../shared/protocols/base";
+import Encrypt from "../kernel/utils/encrypt";
+
 
 // ip访问频次对象：
 export const ipLimitMap: {

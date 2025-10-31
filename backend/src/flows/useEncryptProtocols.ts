@@ -1,5 +1,5 @@
 import {WsClient, WsServer} from "tsrpc";
-import {ServiceType} from "../protocols/serviceProto";
+import {ServiceType} from "../shared/protocols/serviceProto";
 
 // 加密
 const encrypt = (buf: Uint8Array): Uint8Array => {
